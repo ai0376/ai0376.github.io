@@ -6,11 +6,7 @@
     <description>Recent content in redisgo on ownwiki - Coding &amp; Life</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 06 Nov 2019 17:47:20 +0800</lastBuildDate>
-    
-	<atom:link href="/tags/redisgo/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 06 Nov 2019 17:47:20 +0800</lastBuildDate><atom:link href="/tags/redisgo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>redisgo加载lua脚本</title>
       <link>/post/2019-11-06/</link>

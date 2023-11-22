@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.71.1 with theme even" />
+<meta name="generator" content="Hugo 0.97.3 with theme even" />
 
 
 <link rel="canonical" href="/post/2019-12-10/" />
@@ -42,17 +42,14 @@
 <meta property="og:title" content="mongodb 修改字段类型" />
 <meta property="og:description" content="在MongoDB的Collection中存在一些字段 reading 原本应该是string 类型，但是在写入时错误的写成了int，因此需要更改int类型为s" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/post/2019-12-10/" />
+<meta property="og:url" content="/post/2019-12-10/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2019-12-10T17:57:12+08:00" />
 <meta property="article:modified_time" content="2019-12-10T17:57:12+08:00" />
+
 <meta itemprop="name" content="mongodb 修改字段类型">
-<meta itemprop="description" content="在MongoDB的Collection中存在一些字段 reading 原本应该是string 类型，但是在写入时错误的写成了int，因此需要更改int类型为s">
-<meta itemprop="datePublished" content="2019-12-10T17:57:12&#43;08:00" />
-<meta itemprop="dateModified" content="2019-12-10T17:57:12&#43;08:00" />
+<meta itemprop="description" content="在MongoDB的Collection中存在一些字段 reading 原本应该是string 类型，但是在写入时错误的写成了int，因此需要更改int类型为s"><meta itemprop="datePublished" content="2019-12-10T17:57:12+08:00" />
+<meta itemprop="dateModified" content="2019-12-10T17:57:12+08:00" />
 <meta itemprop="wordCount" content="638">
-
-
-
 <meta itemprop="keywords" content="mongo," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="mongodb 修改字段类型"/>
 <meta name="twitter:description" content="在MongoDB的Collection中存在一些字段 reading 原本应该是string 类型，但是在写入时错误的写成了int，因此需要更改int类型为s"/>
@@ -139,7 +136,7 @@
       <p>在MongoDB的Collection中存在一些字段 <code>reading</code> 原本应该是string 类型，但是在写入时错误的写成了int，因此需要更改int类型为string类型。其中数据结构如下：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -177,43 +174,43 @@
 </span><span class="lnt">36
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
-    <span class="nt">&#34;_id&#34;</span> <span class="p">:</span> <span class="err">ObjectId(</span><span class="s2">&#34;5d79097debeae9d530225b93&#34;</span><span class="err">)</span><span class="p">,</span>
-    <span class="nt">&#34;type&#34;</span> <span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
-    <span class="nt">&#34;name&#34;</span> <span class="p">:</span> <span class="s2">&#34;ZhiHu&#34;</span><span class="p">,</span>
-    <span class="nt">&#34;intime&#34;</span> <span class="p">:</span> <span class="err">NumberLong(</span><span class="mi">1568213373</span><span class="err">)</span><span class="p">,</span>
-    <span class="nt">&#34;data&#34;</span> <span class="p">:</span> <span class="p">[</span> 
-        <span class="p">{</span>
-            <span class="nt">&#34;top&#34;</span> <span class="p">:</span> <span class="s2">&#34;1&#34;</span><span class="p">,</span>
-            <span class="nt">&#34;title&#34;</span> <span class="p">:</span> <span class="s2">&#34;六种配色、5499 元起的 iPhone 11 系列发布，配置和性能如何？&#34;</span><span class="p">,</span>
-            <span class="nt">&#34;reading&#34;</span> <span class="p">:</span> <span class="mi">72920000</span><span class="p">,</span>
-            <span class="nt">&#34;url&#34;</span> <span class="p">:</span> <span class="s2">&#34;https://www.zhihu.com/question/345431917&#34;</span><span class="p">,</span>
-            <span class="nt">&#34;state&#34;</span> <span class="p">:</span> <span class="s2">&#34;&#34;</span>
-        <span class="p">},</span> 
-        <span class="p">{</span>
-            <span class="nt">&#34;top&#34;</span> <span class="p">:</span> <span class="s2">&#34;2&#34;</span><span class="p">,</span>
-            <span class="nt">&#34;title&#34;</span> <span class="p">:</span> <span class="s2">&#34;男生找对象看重什么？&#34;</span><span class="p">,</span>
-            <span class="nt">&#34;reading&#34;</span> <span class="p">:</span> <span class="mi">35880000</span><span class="p">,</span>
-            <span class="nt">&#34;url&#34;</span> <span class="p">:</span> <span class="s2">&#34;https://www.zhihu.com/question/292443025&#34;</span><span class="p">,</span>
-            <span class="nt">&#34;state&#34;</span> <span class="p">:</span> <span class="s2">&#34;&#34;</span>
-        <span class="p">},</span> 
-        <span class="p">{</span>
-            <span class="nt">&#34;title&#34;</span> <span class="p">:</span> <span class="s2">&#34;如何评价谢娜辟谣与何老师关系破裂？&#34;</span><span class="p">,</span>
-            <span class="nt">&#34;reading&#34;</span> <span class="p">:</span> <span class="mi">24700000</span><span class="p">,</span>
-            <span class="nt">&#34;url&#34;</span> <span class="p">:</span> <span class="s2">&#34;https://www.zhihu.com/question/345356641&#34;</span><span class="p">,</span>
-            <span class="nt">&#34;state&#34;</span> <span class="p">:</span> <span class="s2">&#34;&#34;</span><span class="p">,</span>
-            <span class="nt">&#34;top&#34;</span> <span class="p">:</span> <span class="s2">&#34;3&#34;</span>
-        <span class="p">},</span> 
-        <span class="p">{</span>
-            <span class="nt">&#34;top&#34;</span> <span class="p">:</span> <span class="s2">&#34;4&#34;</span><span class="p">,</span>
-            <span class="nt">&#34;title&#34;</span> <span class="p">:</span> <span class="s2">&#34;如何看待 iPhone 11 发布会上苹果首次公开对比三星、华为等友商手机？&#34;</span><span class="p">,</span>
-            <span class="nt">&#34;reading&#34;</span> <span class="p">:</span> <span class="mi">11130000</span><span class="p">,</span>
-            <span class="nt">&#34;url&#34;</span> <span class="p">:</span> <span class="s2">&#34;https://www.zhihu.com/question/345432363&#34;</span><span class="p">,</span>
-            <span class="nt">&#34;state&#34;</span> <span class="p">:</span> <span class="s2">&#34;&#34;</span>
-        <span class="p">}</span>
-	<span class="p">]</span>
-<span class="p">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;_id&#34;</span> <span class="p">:</span> <span class="err">ObjectId(</span><span class="s2">&#34;5d79097debeae9d530225b93&#34;</span><span class="err">)</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;type&#34;</span> <span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;name&#34;</span> <span class="p">:</span> <span class="s2">&#34;ZhiHu&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;intime&#34;</span> <span class="p">:</span> <span class="err">NumberLong(</span><span class="mi">1568213373</span><span class="err">)</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;data&#34;</span> <span class="p">:</span> <span class="p">[</span> 
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;top&#34;</span> <span class="p">:</span> <span class="s2">&#34;1&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;title&#34;</span> <span class="p">:</span> <span class="s2">&#34;六种配色、5499 元起的 iPhone 11 系列发布，配置和性能如何？&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;reading&#34;</span> <span class="p">:</span> <span class="mi">72920000</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;url&#34;</span> <span class="p">:</span> <span class="s2">&#34;https://www.zhihu.com/question/345431917&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;state&#34;</span> <span class="p">:</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">},</span> 
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;top&#34;</span> <span class="p">:</span> <span class="s2">&#34;2&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;title&#34;</span> <span class="p">:</span> <span class="s2">&#34;男生找对象看重什么？&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;reading&#34;</span> <span class="p">:</span> <span class="mi">35880000</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;url&#34;</span> <span class="p">:</span> <span class="s2">&#34;https://www.zhihu.com/question/292443025&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;state&#34;</span> <span class="p">:</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">},</span> 
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;title&#34;</span> <span class="p">:</span> <span class="s2">&#34;如何评价谢娜辟谣与何老师关系破裂？&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;reading&#34;</span> <span class="p">:</span> <span class="mi">24700000</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;url&#34;</span> <span class="p">:</span> <span class="s2">&#34;https://www.zhihu.com/question/345356641&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;state&#34;</span> <span class="p">:</span> <span class="s2">&#34;&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;top&#34;</span> <span class="p">:</span> <span class="s2">&#34;3&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">},</span> 
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;top&#34;</span> <span class="p">:</span> <span class="s2">&#34;4&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;title&#34;</span> <span class="p">:</span> <span class="s2">&#34;如何看待 iPhone 11 发布会上苹果首次公开对比三星、华为等友商手机？&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;reading&#34;</span> <span class="p">:</span> <span class="mi">11130000</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;url&#34;</span> <span class="p">:</span> <span class="s2">&#34;https://www.zhihu.com/question/345432363&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;state&#34;</span> <span class="p">:</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>解决方法：</p>
 <p>在MongoDB的shell中执行如下语句即可：</p>
@@ -221,7 +218,7 @@
 <p>执行修改后的<code>reading</code>变成了string, 结构如下：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -259,43 +256,43 @@
 </span><span class="lnt">36
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">{
-    &#34;_id&#34; : ObjectId(&#34;5d79097debeae9d530225b93&#34;),
-    &#34;type&#34; : 2,
-    &#34;name&#34; : &#34;ZhiHu&#34;,
-    &#34;intime&#34; : NumberLong(1568213373),
-    &#34;data&#34; : [ 
-        {
-            &#34;top&#34; : &#34;1&#34;,
-            &#34;title&#34; : &#34;六种配色、5499 元起的 iPhone 11 系列发布，配置和性能如何？&#34;,
-            &#34;reading&#34; : &#34;72920000&#34;,
-            &#34;url&#34; : &#34;https://www.zhihu.com/question/345431917&#34;,
-            &#34;state&#34; : &#34;&#34;
-        }, 
-        {
-            &#34;top&#34; : &#34;2&#34;,
-            &#34;title&#34; : &#34;男生找对象看重什么？&#34;,
-            &#34;reading&#34; : &#34;35880000&#34;,
-            &#34;url&#34; : &#34;https://www.zhihu.com/question/292443025&#34;,
-            &#34;state&#34; : &#34;&#34;
-        }, 
-        {
-            &#34;title&#34; : &#34;如何评价谢娜辟谣与何老师关系破裂？&#34;,
-            &#34;reading&#34; : &#34;24700000&#34;,
-            &#34;url&#34; : &#34;https://www.zhihu.com/question/345356641&#34;,
-            &#34;state&#34; : &#34;&#34;,
-            &#34;top&#34; : &#34;3&#34;
-        }, 
-        {
-            &#34;top&#34; : &#34;4&#34;,
-            &#34;title&#34; : &#34;如何看待 iPhone 11 发布会上苹果首次公开对比三星、华为等友商手机？&#34;,
-            &#34;reading&#34; : &#34;11130000&#34;,
-            &#34;url&#34; : &#34;https://www.zhihu.com/question/345432363&#34;,
-            &#34;state&#34; : &#34;&#34;
-        }
-	]
-}
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">    &#34;_id&#34; : ObjectId(&#34;5d79097debeae9d530225b93&#34;),
+</span></span><span class="line"><span class="cl">    &#34;type&#34; : 2,
+</span></span><span class="line"><span class="cl">    &#34;name&#34; : &#34;ZhiHu&#34;,
+</span></span><span class="line"><span class="cl">    &#34;intime&#34; : NumberLong(1568213373),
+</span></span><span class="line"><span class="cl">    &#34;data&#34; : [ 
+</span></span><span class="line"><span class="cl">        {
+</span></span><span class="line"><span class="cl">            &#34;top&#34; : &#34;1&#34;,
+</span></span><span class="line"><span class="cl">            &#34;title&#34; : &#34;六种配色、5499 元起的 iPhone 11 系列发布，配置和性能如何？&#34;,
+</span></span><span class="line"><span class="cl">            &#34;reading&#34; : &#34;72920000&#34;,
+</span></span><span class="line"><span class="cl">            &#34;url&#34; : &#34;https://www.zhihu.com/question/345431917&#34;,
+</span></span><span class="line"><span class="cl">            &#34;state&#34; : &#34;&#34;
+</span></span><span class="line"><span class="cl">        }, 
+</span></span><span class="line"><span class="cl">        {
+</span></span><span class="line"><span class="cl">            &#34;top&#34; : &#34;2&#34;,
+</span></span><span class="line"><span class="cl">            &#34;title&#34; : &#34;男生找对象看重什么？&#34;,
+</span></span><span class="line"><span class="cl">            &#34;reading&#34; : &#34;35880000&#34;,
+</span></span><span class="line"><span class="cl">            &#34;url&#34; : &#34;https://www.zhihu.com/question/292443025&#34;,
+</span></span><span class="line"><span class="cl">            &#34;state&#34; : &#34;&#34;
+</span></span><span class="line"><span class="cl">        }, 
+</span></span><span class="line"><span class="cl">        {
+</span></span><span class="line"><span class="cl">            &#34;title&#34; : &#34;如何评价谢娜辟谣与何老师关系破裂？&#34;,
+</span></span><span class="line"><span class="cl">            &#34;reading&#34; : &#34;24700000&#34;,
+</span></span><span class="line"><span class="cl">            &#34;url&#34; : &#34;https://www.zhihu.com/question/345356641&#34;,
+</span></span><span class="line"><span class="cl">            &#34;state&#34; : &#34;&#34;,
+</span></span><span class="line"><span class="cl">            &#34;top&#34; : &#34;3&#34;
+</span></span><span class="line"><span class="cl">        }, 
+</span></span><span class="line"><span class="cl">        {
+</span></span><span class="line"><span class="cl">            &#34;top&#34; : &#34;4&#34;,
+</span></span><span class="line"><span class="cl">            &#34;title&#34; : &#34;如何看待 iPhone 11 发布会上苹果首次公开对比三星、华为等友商手机？&#34;,
+</span></span><span class="line"><span class="cl">            &#34;reading&#34; : &#34;11130000&#34;,
+</span></span><span class="line"><span class="cl">            &#34;url&#34; : &#34;https://www.zhihu.com/question/345432363&#34;,
+</span></span><span class="line"><span class="cl">            &#34;state&#34; : &#34;&#34;
+</span></span><span class="line"><span class="cl">        }
+</span></span><span class="line"><span class="cl">	]
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
 </div>
 </div>
     </div>
@@ -374,7 +371,7 @@
   <span class="copyright-year">
     &copy; 
     2018 - 
-    2022
+    2023
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>
@@ -394,7 +391,7 @@
 
 
 
-<script type="text/javascript" src="/js/main.min.d7b7ada643c9c1a983026e177f141f7363b4640d619caf01d8831a6718cd44ea.js"></script>
+<script type="text/javascript" src="/js/main.min.30dad356188cdaba5047112eaa8bf5e85cb14ae7e803337403591fce94a531a0.js"></script>
 
 
 

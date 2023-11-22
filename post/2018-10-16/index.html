@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.71.1 with theme even" />
+<meta name="generator" content="Hugo 0.97.3 with theme even" />
 
 
 <link rel="canonical" href="/post/2018-10-16/" />
@@ -42,17 +42,14 @@
 <meta property="og:title" content="Docker MYSQL 和 Redis 启动脚本" />
 <meta property="og:description" content="redis 1 docker run -p 6379:6379 -v $PWD/redis.conf:/usr/local/etc/redis/redis.conf -v $PWD:/data -v $PWD:/var --name redis_6379 -d redis redis-server /usr/local/etc/redis/redis.conf mysql 1 docker run --name mysql_3306 -v $PWD:/etc/mysql/conf.d -v $PWD/logs:/logs -v $PWD/data:/var/lib/mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=123456 -d mysql" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/post/2018-10-16/" />
+<meta property="og:url" content="/post/2018-10-16/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2018-10-16T18:08:11+08:00" />
 <meta property="article:modified_time" content="2018-10-16T18:08:11+08:00" />
+
 <meta itemprop="name" content="Docker MYSQL 和 Redis 启动脚本">
-<meta itemprop="description" content="redis 1 docker run -p 6379:6379 -v $PWD/redis.conf:/usr/local/etc/redis/redis.conf -v $PWD:/data -v $PWD:/var --name redis_6379 -d redis redis-server /usr/local/etc/redis/redis.conf mysql 1 docker run --name mysql_3306 -v $PWD:/etc/mysql/conf.d -v $PWD/logs:/logs -v $PWD/data:/var/lib/mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=123456 -d mysql">
-<meta itemprop="datePublished" content="2018-10-16T18:08:11&#43;08:00" />
-<meta itemprop="dateModified" content="2018-10-16T18:08:11&#43;08:00" />
+<meta itemprop="description" content="redis 1 docker run -p 6379:6379 -v $PWD/redis.conf:/usr/local/etc/redis/redis.conf -v $PWD:/data -v $PWD:/var --name redis_6379 -d redis redis-server /usr/local/etc/redis/redis.conf mysql 1 docker run --name mysql_3306 -v $PWD:/etc/mysql/conf.d -v $PWD/logs:/logs -v $PWD/data:/var/lib/mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=123456 -d mysql"><meta itemprop="datePublished" content="2018-10-16T18:08:11+08:00" />
+<meta itemprop="dateModified" content="2018-10-16T18:08:11+08:00" />
 <meta itemprop="wordCount" content="36">
-
-
-
 <meta itemprop="keywords" content="docker,mysql,redis," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Docker MYSQL 和 Redis 启动脚本"/>
 <meta name="twitter:description" content="redis 1 docker run -p 6379:6379 -v $PWD/redis.conf:/usr/local/etc/redis/redis.conf -v $PWD:/data -v $PWD:/var --name redis_6379 -d redis redis-server /usr/local/etc/redis/redis.conf mysql 1 docker run --name mysql_3306 -v $PWD:/etc/mysql/conf.d -v $PWD/logs:/logs -v $PWD/data:/var/lib/mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=123456 -d mysql"/>
@@ -141,22 +138,22 @@
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">docker run -p 6379:6379 -v $PWD/redis.conf:/usr/local/etc/redis/redis.conf -v $PWD:/data -v $PWD:/var  --name redis_6379 -d redis redis-server /usr/local/etc/redis/redis.conf
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">docker run -p 6379:6379 -v $PWD/redis.conf:/usr/local/etc/redis/redis.conf -v $PWD:/data -v $PWD:/var  --name redis_6379 -d redis redis-server /usr/local/etc/redis/redis.conf
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>mysql</li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">docker run --name mysql_3306 -v $PWD:/etc/mysql/conf.d -v $PWD/logs:/logs -v $PWD/data:/var/lib/mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=123456 -d mysql
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">docker run --name mysql_3306 -v $PWD:/etc/mysql/conf.d -v $PWD/logs:/logs -v $PWD/data:/var/lib/mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=123456 -d mysql
+</span></span></code></pre></td></tr></table>
 </div>
 </div>
     </div>
@@ -237,7 +234,7 @@
   <span class="copyright-year">
     &copy; 
     2018 - 
-    2022
+    2023
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>
@@ -257,7 +254,7 @@
 
 
 
-<script type="text/javascript" src="/js/main.min.d7b7ada643c9c1a983026e177f141f7363b4640d619caf01d8831a6718cd44ea.js"></script>
+<script type="text/javascript" src="/js/main.min.30dad356188cdaba5047112eaa8bf5e85cb14ae7e803337403591fce94a531a0.js"></script>
 
 
 
